@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "./terms.scss" as *;
 
 /* Theme internally shared Variables */
@@ -32,15 +33,15 @@ $breakpoints: (
 ) !default;
 
 /* Focus Outline Colors */
-$focus-outline-default-shadow-color: rgba(
+$focus-outline-default-shadow-color: color.change(
   $emphasized-medium-color,
-  0.3
+  $alpha: 0.3
 ) !default;
-$focus-outline-primary-shadow-color: rgba($primary-medium-color, 0.3) !default;
-$focus-outline-success-shadow-color: rgba($success-medium-color, 0.3) !default;
-$focus-outline-info-shadow-color: rgba($info-medium-color, 0.3) !default;
-$focus-outline-warning-shadow-color: rgba($warning-medium-color, 0.3) !default;
-$focus-outline-danger-shadow-color: rgba($danger-medium-color, 0.3) !default;
+$focus-outline-primary-shadow-color: color.change($primary-medium-color, $alpha: 0.3) !default;
+$focus-outline-success-shadow-color: color.change($success-medium-color, $alpha: 0.3) !default;
+$focus-outline-info-shadow-color: color.change($info-medium-color, $alpha: 0.3) !default;
+$focus-outline-warning-shadow-color: color.change($warning-medium-color, $alpha: 0.3) !default;
+$focus-outline-danger-shadow-color: color.change($danger-medium-color, $alpha: 0.3) !default;
 
 /* App */
 $app-viewport-bg-color: $gray-light-5 !default;
